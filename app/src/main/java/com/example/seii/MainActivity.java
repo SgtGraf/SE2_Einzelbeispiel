@@ -63,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                String input = inputField.getText().toString();
+                textBottom.setText(Sorter.sort(input));
+
             }
         });
 
