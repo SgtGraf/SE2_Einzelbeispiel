@@ -13,6 +13,7 @@ import java.util.concurrent.ExecutionException;
 public class MainActivity extends AppCompatActivity {
 
     Button button;
+    Button button2;
     EditText inputField;
     TextView textTop;
     TextView textBottom;
@@ -23,15 +24,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = (Button)findViewById(R.id.button);
-        button.setText("Los!");
+        button = findViewById(R.id.button);
+        button.setText("Server");
 
-        inputField = (EditText)findViewById(R.id.editText);
+        button2 = findViewById(R.id.button2);
+        button2.setText("Lokal");
 
-        textTop = (TextView)findViewById(R.id.textView);
+        inputField = findViewById(R.id.editText);
+
+        textTop = findViewById(R.id.textView);
         textTop.setText("Matrikelnummer");
 
-        textBottom = (TextView)findViewById(R.id.textView2);
+        textBottom = findViewById(R.id.textView2);
         textBottom.setText("...");
 
 
@@ -52,6 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 textBottom.setText(connection.getOutput());
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
 
