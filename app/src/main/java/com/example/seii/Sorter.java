@@ -18,17 +18,12 @@ public class Sorter {
         }
         Arrays.sort(retArr);
 
-        // initialise char array with values of input string and count the amount of even numbers
-        // array gets sorted
-
         char[]arrEven = new char[amtEven];
         int j = 0;
 
         int amtOdd = length-amtEven;
         char[]arrOdd = new char[amtOdd];
         int k = 0;
-
-        // two new arrays for even and odd numbers
 
         for (int i = 0; i < length; i++) {
             if ((retArr[i] % 2) == 0) {
@@ -39,10 +34,6 @@ public class Sorter {
                 k++;
             }
         }
-
-        // loops through original array and puts numbers in the respective array
-
-
 
         for (int i = 0; i < retArr.length; i++) {
 
@@ -56,13 +47,9 @@ public class Sorter {
             }
         }
 
-        // both arrays merge together, starting with even numbers first
-
         String ret = new String(retArr);
 
         return ret;
-
-
     }
 
 }
