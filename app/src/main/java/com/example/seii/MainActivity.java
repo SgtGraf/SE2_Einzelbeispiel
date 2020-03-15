@@ -1,15 +1,16 @@
 package com.example.seii;
 
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button button;
-    EditText input;
+    EditText inputField;
     TextView textTop;
     TextView textBottom;
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         button = (Button)findViewById(R.id.button);
         button.setText("Los!");
 
-        input = (EditText)findViewById(R.id.editText);
+        inputField = (EditText)findViewById(R.id.editText);
 
         textTop = (TextView)findViewById(R.id.textView);
         textTop.setText("Matrikelnummer");
@@ -30,8 +31,12 @@ public class MainActivity extends AppCompatActivity {
         textBottom = (TextView)findViewById(R.id.textView2);
         textBottom.setText("...");
 
+    }
 
+    @Override
+    public void onClick(View view) {
 
+        String input = inputField.getText().toString();
 
     }
 }
